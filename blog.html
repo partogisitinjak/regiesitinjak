@@ -3,49 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Partogi Sitinjak</title>
+    <title>Curhat Dong Mah | Regie Sitinjak</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
-        body { background-color: #0a0a0a; color: #fff; font-family: 'Space Grotesk', sans-serif; line-height: 1.6; }
+        body { background-color: #0a0a0a; color: #fff; font-family: 'Space Grotesk', sans-serif; line-height: 1.6; overflow-x: hidden; }
+        
+        /* Navbar Minimalis */
         .navbar { background-color: rgba(10, 10, 10, 0.98); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.08); }
-        .line-border { border-top: 1px solid rgba(255,255,255,0.12); }
-        .huge-text { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.9; font-weight: 700; letter-spacing: -2px; }
-        .blog-item { padding: 50px 0; text-decoration: none; color: inherit; display: block; transition: 0.4s; }
-        .blog-item:hover { background: rgba(255,255,255,0.03); padding-left: 15px; }
-        .blog-title { font-size: 1.75rem; transition: 0.3s; color: #fff; }
-        .blog-desc { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
-        .blog-category { font-size: 0.65rem; color: #007bff; border: 1px solid #007bff; padding: 3px 12px; border-radius: 50px; text-transform: uppercase; font-weight: 700; margin-bottom: 15px; display: inline-block; }
-        .blog-date { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 2px; }
+        .nav-link { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #fff !important; }
+        
+        /* Utility Garis & Teks Besar */
+        .line-border { border-top: 1px solid rgba(255,255,255,0.12); width: 100%; }
+        .huge-text { font-size: clamp(2.8rem, 7vw, 6.5rem); line-height: 0.9; font-weight: 700; letter-spacing: -3px; text-transform: uppercase; }
+        .outline-text { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.4); }
+        
+        /* Gaya Item Blog (Pake Gaya Project-Item) */
+        .blog-item { padding: 50px 0; transition: all 0.5s ease; text-decoration: none; color: inherit; display: block; border-bottom: 1px solid rgba(255,255,255,0.12); }
+        .blog-item:hover { background: rgba(255,255,255,0.03); }
+        
+        /* Pill Label */
+        .label-pill { font-size: 0.65rem; border: 1px solid rgba(255,255,255,0.3); padding: 3px 12px; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="img.png" alt="Logo" style="width: 38px; filter: grayscale(1);" onerror="this.src='https://via.placeholder.com/50'"></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="img.png" alt="Logo" style="width: 38px; filter: grayscale(1);" onerror="this.src='https://via.placeholder.com/50'">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Proyek</a></li>
-                    <li class="nav-item"><a class="nav-link text-white-50" href="about.html">Tentang Saya</a></li>
-                    <li class="nav-item"><a class="nav-link active text-white" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="about.html">ABOUT ME</a></li>
+                    <li class="nav-item"><a class="nav-link active text-white" href="blog.html">Curhat Dong Mah</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container py-5">
-        <header class="mb-5 pt-4"><h1 class="huge-text">CATATAN <br> <span style="color:transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.3);">DIGITAL</span>.</h1></header>
-        <section class="mt-5"><div class="line-border"></div>
-            <a href="#" class="blog-item line-border">
-                <div class="row align-items-start">
-                    <div class="col-md-2 blog-date mb-3">13 Mar 2026</div>
-                    <div class="col-md-8"><span class="blog-category">Teknologi</span><h3 class="blog-title fw-bold">Bootstrap 5 & Sistem Informasi</h3><p class="blog-description blog-desc">Analisis efisiensi framework modern untuk pengembangan arsitektur perpustakaan berbasis web.</p></div>
-                    <div class="col-md-2 text-md-end mt-2"><i class="bi bi-arrow-up-right fs-3 opacity-50"></i></div>
+        <header class="mb-5 pt-4 text-start">
+           <!-- <p class="text-uppercase small mb-4" style="letter-spacing: 2px; color: rgba(255,255,255,0.5);">Regie Sitinjak // Log Data Curhat</p> -->
+            <div class="huge-text">CURHAT <br> <span class="outline-text">DONG</span> <br> MAH<span class="text-primary-custom">.</span></div>
+        </header>
+
+        <div class="line-border mt-5"></div>
+
+        <section class="blog-list">
+            <div class="blog-item text-start">
+                <div class="row align-items-center">
+                    <div class="col-md-9 mb-4 mb-md-0">
+                        <div class="mb-3">
+                            <span class="label-pill">DATA INCOMING</span>
+                        </div>
+                        <h2 class="fw-bold mb-3" style="font-size: 1.8rem;">Belum ada curhatan di sini.</h2>
+                        <p style="color: rgba(255,255,255,0.7); max-width: 600px;">
+                            Sedang menunggu curhatan yang asik nih buat ditampilin, tunggu ya bre!
+                        </p>
+                    </div>
                 </div>
-            </a>
-            <div class="line-border"></div>
-        </section>
+            </div>
+            </section>
+
+        <footer class="mt-5 py-5 text-start">
+            <div class="line-border mb-5"></div>
+            <div class="row">
+                <div class="col-md-8 mb-4 mb-md-0">
+                  <!-- Ini adalah komentar atau pesan catatan
+                  <h2 class="fw-bold mb-4">Butuh sistem yang sinematik?</h2>
+                    <a href="mailto:regiesitinjak@gmail.com" class="text-white text-decoration-none border-bottom fs-3" style="border-bottom: 2px solid rgba(255,255,255,0.12);">regiesitinjak@gmail.com</a> -->
+                </div>
+                <div class="col-md-4 text-md-end d-flex flex-column justify-content-end align-items-md-end">
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin:0;">© 2026 Regie Sitinjak</p>
+                    <div class="d-flex gap-3 fs-5 mt-2">
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
