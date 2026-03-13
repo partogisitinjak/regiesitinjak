@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Saya | Partogi Sitinjak</title>
+    <title>Tentang Saya | Regie Sitinjak</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -13,10 +13,14 @@
         .line-border { border-top: 1px solid rgba(255,255,255,0.12); }
         .huge-text { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.9; font-weight: 700; letter-spacing: -2px; }
         .outline-text { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.4); }
-        .profile-box { background: #111; border: 1px solid rgba(255,255,255,0.1); aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; }
-        .skill-tag { font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.3); padding: 5px 15px; margin: 0 5px 10px 0; display: inline-block; color: #fff; }
-        p.lead { color: rgba(255,255,255,0.9); }
-        p.text-muted { color: rgba(255,255,255,0.7) !important; }
+        .profile-box { background: #0f0f0f; border: 1px solid rgba(255,255,255,0.1); aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .skill-tag { font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.3); padding: 5px 15px; margin: 0 10px 10px 0; display: inline-block; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
+        .spec-item { margin-bottom: 20px; }
+        .spec-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.4); margin-bottom: 4px; display: block; }
+        .spec-value { font-weight: 500; font-size: 0.95rem; }
+        p.lead { color: rgba(255,255,255,0.9); font-weight: 400; }
+        p.text-muted { color: rgba(255,255,255,0.6) !important; }
+        .text-primary-custom { color: #fff; border-left: 3px solid #fff; padding-left: 15px; }
     </style>
 </head>
 <body>
@@ -25,34 +29,78 @@
             <a class="navbar-brand" href="index.html"><img src="img.png" alt="Logo" style="width: 38px; filter: grayscale(1);" onerror="this.src='https://via.placeholder.com/50'"></a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Proyek</a></li>
-                    <li class="nav-item"><a class="nav-link active text-white" href="about.html">Tentang Saya</a></li>
-                    <li class="nav-item"><a class="nav-link text-white-50" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link active text-white" href="about.html">ABOUT ME</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="blog.html">CURHAT DONG MAH</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container py-5">
         <header class="mb-5 pt-4">
-            <h1 class="huge-text">LOGIKA <span class="outline-text">DATA</span> <br> ESTETIKA <span class="outline-text">VISUAL</span>.</h1>
+            <h1 class="huge-text">NAVIGASI <span class="outline-text">IDE</span> <br> EKSEKUSI <span class="outline-text">NYATA</span>.</h1>
         </header>
-        <section class="mt-5"><div class="line-border pt-5"></div>
+
+        <section class="mt-5">
+            <div class="line-border pt-5"></div>
             <div class="row g-5">
                 <div class="col-md-4">
-                    <div class="profile-box"><i class="bi bi-person fs-1 opacity-25"></i></div>
-                    <div class="mt-4"><p class="small mb-1 opacity-50 text-uppercase">Education</p><p class="fw-bold">Sistem Informasi, Gunadarma</p></div>
+                    <div class="profile-box mb-4">
+                  <img src="regie.jpg" alt="Regie Sitinjak" style="width: 100%; height: 100%; object-fit: cover;">
+                   </div>
+                    
+                    <div class="personal-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Identification</span>
+                            <span class="spec-value">Regie Sitinjak</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Education</span>
+                            <span class="spec-value">Information Systems, UFO</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Star Sign</span>
+                            <span class="spec-value">Capricorn</span> </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Interests // Hobby</span>
+                            <span class="spec-value">Makan orang, Tech Exploration, menghalu yang tidak pasti</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="col-md-8">
-                    <h4 class="fw-bold mb-4 text-primary">// BIOGRAFI</h4>
-                    <p class="lead mb-4">Saya membangun sistem informasi dengan pendekatan visual yang kuat, memastikan setiap solusi tidak hanya efisien tetapi juga bermakna secara naratif.</p>
-                    <p class="text-muted">Latar belakang multimedia memberikan saya perspektif unik dalam dunia pemrograman. Saya percaya bahwa cybersecurity dan performa backend adalah pondasi dari pengalaman digital yang sempurna.</p>
+                    <h4 class="fw-bold mb-4 text-primary-custom">MANIFESTO</h4>
+                    <p class="lead mb-4">
+                        Membangun jembatan antara logika sistem yang kaku dengan imajinasi yang (jujur saja) agak kejauhan.
+                    </p>
+                    <p class="text-muted">
+                        Panggil aja guwah Regie, Toji, atau Tohiks, terserah lu pada dah mau manggil ape, asal jangan dipanggil pas lagi sayang-sayangnya:^ Saya adalah manusia biasa sekaligus merupakan mahasiswa Sistem Informasi yang sedang berusaha menavigasi hidup di antara baris kode yang sering error dan berkreasi yang ga jauh-jauh dari multimedia yang nggak kenal waktu.
+                    </p>
+                    <p class="text-muted">
+                        Saya penganut aliran bahwa setiap data punya cerita, tapi nggak semua cerita harus serius. Di luar kampus, hobi saya adalah "tersesat" secara sengaja lewat referensi visual yang nggak biasa dan tontonan alternatif yang (katanya) bisa produktif juga bisa jorang, padahal mungkin cuma alasan saya buat halu secara terstruktur, huahahahahaah...
+                    </p>
+                  <p class="text-muted">
+                    Bagi saya, sedikit tersesat itu perlu banget. Kayak gini, Kalau lu nggak tersesat, kita nggak akan pernah tahu ada jalan pintas yang lebih asik buat menguasai dunia. Karena yang perlu kita tahu, banyak hal yang harus dan bisa lu eksplore, tetapi sedikit diantaranya yang perlu lu batasin karena ga semuanya orang ngeliat kita menerima atau bisa juga tidak menoleransi apa yang kita eksplore itu.
+
                     <div class="line-border mt-5 pt-4"></div>
-                    <h5 class="fw-bold mb-4">CORE SKILLS</h5>
-                    <div class="d-flex flex-wrap"><span class="skill-tag">PHP / MySQL</span><span class="skill-tag">Cybersecurity</span><span class="skill-tag">Video Production</span><span class="skill-tag">UI/UX Logic</span></div>
+                    <h5 class="fw-bold mb-4">THE TOOLKIT</h5>
+                    <div class="d-flex flex-wrap">
+                        <span class="skill-tag">PHP / MySQL</span>
+                        <span class="skill-tag">Cybersecurity Awareness</span>
+                        <span class="skill-tag">Video Production</span>
+                        <span class="skill-tag">Multimedia Major</span>
+                        <span class="skill-tag">Productive Hallucination</span>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <a href="mailto:regiesitinjak@gmail.com" class="btn btn-outline-light rounded-pill px-4 py-2 small" style="font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase;">OPEN QUESTION!</a>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
